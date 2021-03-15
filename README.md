@@ -4,6 +4,7 @@ Proyecto para la asignatura de Aplicaciones Industriales y comerciales del MUVA
 
 
 #  GROUP F Detection
+En este repositorio se irá desarrollando la aplicación de detección de posibles clientes de una tienda y la detección de las personas que finalmente acaban pasando a la tienda, desarrollandolo con una solución aplicando vision por computador.
 <img src="./imagenes/repository-open-graph-template.png">
  RedditURJC Practica2 MetodologíaDeLaProgramación
  
@@ -45,7 +46,7 @@ AfluenceCounter
 <img src="./imagenes/classDiagram.png">
 
 ## INTERFAZ ##
-[Funcionamiento Interfaz Sistema implementada por REDDITURJC (Memoria 2)](./doc/memoria.pdf)
+[Interfaz](./doc/memoria.pdf)
 
 ## PRUEBAS UNITARIAS ##
-[Pruebas UNITARIAS (Memoria 3)](./doc/memoria3.pdf)
+[Pruebas UNITARIAS](./doc/memoria3.pdf)
