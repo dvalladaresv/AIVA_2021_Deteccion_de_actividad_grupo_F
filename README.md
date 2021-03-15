@@ -14,7 +14,7 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
  - [Teachers](#Teachers)
  - [Requirements](#Requirements)
  - [Class UML Diagram](#Class-UML-Diagram)
- - [Funcionamiento Interfaz Sistema implementada por REDDITURJC](#INTERFAZ)
+ - [Interfaz](#INTERFAZ)
  - [Pruebas Unitarias](#Pruebas-unitarias)
 
 
