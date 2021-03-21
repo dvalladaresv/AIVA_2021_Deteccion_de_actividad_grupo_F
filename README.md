@@ -13,7 +13,7 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
  - [Members of the development team](#Members-of-the-development-team)
  - [Teachers](#Teachers)
  - [Requirements](#Requirements)
- - [Interfaz](#INTERFAZ)
+ - [Interfaz(MOCK-UP)](#INTERFAZ(MOCK-UP))
  - [Pruebas Unitarias](#Pruebas-unitarias)
  - [Presupuesto](#Presupuesto)
 
@@ -40,8 +40,8 @@ AfluenceCounter
 ## Requirements ##
 [DocumentodeRequisitos](./doc/Enunciado_P1-editado.pdf)
 
-## INTERFAZ ##
-[Interfaz](./doc/memoria.pdf)
+## INTERFAZ(MOCK-UP) ##
+[Interfaz](./mock-up/mockup.pdf)
 
 ## PRUEBAS UNITARIAS ##
 [Pruebas UNITARIAS](./doc/memoria3.pdf)
