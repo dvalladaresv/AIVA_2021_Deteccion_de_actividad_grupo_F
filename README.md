@@ -21,7 +21,7 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
 
 
 
-## Name of the  application ##
+## Name of the application ##
 AfluenceCounter
 
 ## Members of the development team ##
@@ -44,7 +44,7 @@ AfluenceCounter
 [Interfaz](./mock-up/mockup.pdf)
 
 ## PRUEBAS UNITARIAS ##
-[Pruebas UNITARIAS](./doc/memoria3.pdf)
+[Pruebas UNITARIAS](./code)
 
 ## Presupuesto ##
 [Presupuesto](./docs/presupuesto_proyecto.pdf)
