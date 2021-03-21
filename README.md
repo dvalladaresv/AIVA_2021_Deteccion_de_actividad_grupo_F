@@ -38,7 +38,7 @@ AfluenceCounter
 
 
 ## Requirements ##
-[DocumentodeRequisitos](./doc/Enunciado_P1-editado.pdf)
+[DocumentodeRequisitos](./DSR/RequisitosDSR.pdf)
 
 ## INTERFAZ(MOCK-UP) ##
 [Interfaz](./mock-up/mockup.pdf)
