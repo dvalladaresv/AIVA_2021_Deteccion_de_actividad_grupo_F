@@ -13,15 +13,13 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
  - [Members of the development team](#Members-of-the-development-team)
  - [Teachers](#Teachers)
  - [Requirements](#Requirements)
- - [Class UML Diagram](#Class-UML-Diagram)
  - [Interfaz](#INTERFAZ)
  - [Pruebas Unitarias](#Pruebas-unitarias)
+ - [Presupuesto](#Presupuesto)
 
 
 
 
-Development Environment
-Class UML Diagram
 
 ## Name of the  application ##
 AfluenceCounter
@@ -31,7 +29,7 @@ AfluenceCounter
 | ---- | ---- | ------ |
 | Israel Peñalver Sánchez | i.penalver.2016@alumnos.urjc.es | [IsraelSonseca](https://github.com/IsraelSonseca) |
 | David Vallares Vigara |	d.valladaresv@alumnos.urjc.es |	[dvalladaresv](https://github.com/dvalladaresv) |
-| Ales Darío Cevallos Juárez |	------------@alumnos.urjc.es |	[AlexCeval](https://github.com/AlexCeval) |
+| Ales Darío Cevallos Juárez |	ad.cevallos@alumnos.urjc.es |	[AlexCeval](https://github.com/AlexCeval) |
 
 ## Teachers ##
 | Name | Mail | GitHub |
@@ -42,11 +40,11 @@ AfluenceCounter
 ## Requirements ##
 [DocumentodeRequisitos](./doc/Enunciado_P1-editado.pdf)
 
-## Class UML Diagram ##
-<img src="./imagenes/classDiagram.png">
-
 ## INTERFAZ ##
 [Interfaz](./doc/memoria.pdf)
 
 ## PRUEBAS UNITARIAS ##
 [Pruebas UNITARIAS](./doc/memoria3.pdf)
+
+## Presupuesto ##
+[Presupuesto](./docs/presupuesto_proyecto.pdf)
