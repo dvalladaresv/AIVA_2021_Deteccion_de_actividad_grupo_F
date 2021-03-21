@@ -47,4 +47,4 @@ AfluenceCounter
 [Pruebas UNITARIAS](./code)
 
 ## Presupuesto ##
-[Presupuesto](./docs/presupuesto_proyecto.pdf)
+[Presupuesto](./docs/Presupuesto.pdf)
