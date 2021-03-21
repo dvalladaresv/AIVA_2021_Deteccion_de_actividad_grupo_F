@@ -38,10 +38,10 @@ AfluenceCounter
 
 
 ## Requirements ##
-[DocumentodeRequisitos](./DSR/RequisitosDSR.pdf)
+[DocumentodeRequisitos](./docs/RequisitosDSR.pdf)
 
 ## INTERFAZ(MOCK-UP) ##
-[Interfaz](./mock-up/mockup.pdf)
+[Interfaz](./docs/mockup.pdf)
 
 ## PRUEBAS UNITARIAS ##
 [Pruebas UNITARIAS](./code)
