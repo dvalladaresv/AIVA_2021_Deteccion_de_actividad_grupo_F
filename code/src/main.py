@@ -34,10 +34,10 @@ def process_video(video_path, output_video=None):
     count_passed = 0
     count_enter = 0
 
-    if not os.path.exists("yolov3.weights"):
+    if not os.path.exists("../assets/model/yolov3.weights"):
         print("downloading checkpoint yolov3.weights... wait please.")
         wget.download("https://pjreddie.com/media/files/yolov3.weights")
-    det_inst = Detector("yolov3.weights", "yolov3.cfg")
+    det_inst = Detector("../assets/model/yolov3.weights", "../assets/model/yolov3.cfg")
 
     cap = cv2.VideoCapture(video_path)
     width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)  # float
