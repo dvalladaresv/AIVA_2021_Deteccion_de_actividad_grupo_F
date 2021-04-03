@@ -44,7 +44,7 @@ AfluenceCounter
 [Interfaz](./docs/mockup.pdf)
 
 ## PRUEBAS UNITARIAS ##
-[Pruebas UNITARIAS](./code)
+[Pruebas UNITARIAS](code1)
 
 ## Presupuesto ##
 [Presupuesto](./docs/Presupuesto.pdf)
