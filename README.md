@@ -9,42 +9,97 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
  
  
 # AfluenceCounter
- - [Name of the application](#Name-of-the-application)
- - [Members of the development team](#Members-of-the-development-team)
- - [Teachers](#Teachers)
- - [Requirements](#Requirements)
- - [Interfaz(MOCK-UP)](#INTERFAZ(MOCK-UP))
- - [Pruebas Unitarias](#Pruebas-unitarias)
+ - [Nombre de la aplicación](#Name-of-the-application)
+ - [Equipo de Desarrollo](#Members-of-the-development-team)
+ - [Profesores](#Teachers)
+ - [Documentación de Requisitos](#Requirements)
  - [Presupuesto](#Presupuesto)
+ - [Interfaz (MOCK-UP)](#INTERFAZ(MOCK-UP))
+ - [Ejecución de la aplicación](#INTERFAZ(MOCK-UP))
+ - [Testing](#Pruebas-unitarias)
 
 
 
 
 
-## Name of the application ##
+
+## Nombre de la aplicación ##
 AfluenceCounter
 
-## Members of the development team ##
+## Equipo de Desarrollo ##
 | Name | Mail | GitHub |
 | ---- | ---- | ------ |
 | Israel Peñalver Sánchez | i.penalver.2016@alumnos.urjc.es | [IsraelSonseca](https://github.com/IsraelSonseca) |
 | David Vallares Vigara |	d.valladaresv@alumnos.urjc.es |	[dvalladaresv](https://github.com/dvalladaresv) |
 | Ales Darío Cevallos Juárez |	ad.cevallos@alumnos.urjc.es |	[AlexCeval](https://github.com/AlexCeval) |
 
-## Teachers ##
+## Profesores ##
 | Name | Mail | GitHub |
 | ---- | ---- | ------ |
 | José Francisco Vélez Serrano | jose.velez@urjc.es | [jfvelezserrano](https://github.com/jfvelezserrano) |
 
 
-## Requirements ##
+## Documentación de Requisitos ##
 [Documento de Requisitos](./docs/RequisitosDRS.pdf)
-
-## INTERFAZ(MOCK-UP) ##
-[Interfaz](./docs/mockup.pdf)
-
-## PRUEBAS UNITARIAS ##
-[Pruebas UNITARIAS](code1)
 
 ## Presupuesto ##
 [Presupuesto](./docs/Presupuesto.pdf)
+
+## INTERFAZ (MOCK-UP) ##
+[Interfaz](./docs/mockup.pdf)
+
+## Ejecución de la aplicación ##  
+
+### Pre-requisitos    
+- El proyecto se ha desarrollado utilizando la versión de python 3.8. Es necesario tener instalado [pip](https://pypi.org/project/pip/) para descargase las librerías necesarias. Se recomienda la creación de un entorno virtual para evitar problemas de dependencias, por ejemplo utilizando [virtualenv](https://virtualenv.pypa.io/en/latest/).   
+- Es necesario instalarse las siguientes librerías.   
+~~~
+    pip install opencv-contrib-python==4.5.1.48
+    pip install numpy==1.20.2
+    pip install wget==3.2
+~~~ 
+- Para facilitar la instalación de todas las dependencias se proporciona un fichero [requierements.txt](./code/requieremetns.txt) que se encuentra dentro del directorio code. Para lanzarlo dirigirse a este directorio y lanzar:
+~~~
+    pip install -r requierements.txt
+~~~
+- Es necesario descargase los pesos de la red Yolo en el directorio [/code/assests/model](/code/assests/model). Para ello ejecutar los siguientes comandos:
+~~~ 
+cd /code/assests/model 
+wget https://pjreddie.com/media/files/yolov3.weights
+~~~ 
+
+### Descargar el repositorio
+- Se recomienda utilizar la herramienta de control de versines [git](https://git-scm.com/) para clonarse el repositorio.  
+~~~
+    git clone https://github.com/dvalladaresv/AIVA_2021_Deteccion_de_actividad_grupo_F.git
+~~~
+- Si no desea instalarse git, puede descargarse el repositorio como un fichero comprimido .zip. 
+
+### Ejecucuión
+
+- El lanzamiento de la aplicación se puede realizar por línea de comandos ejecutando:
+
+~~~
+    python affluence_counter.py --video_path=<path_video>
+~~~
+- Un ejemplo de lanzamiento sería:
+~~~
+   python affluence_counter.py --video_path=../videos/1_EnterExitCrossingPaths1front.mpg
+~~~
+
+
+Para la correcta ejecución de la aplicación es necesario tener instalado las siguientes dependencias.
+## Testing ##
+
+- Las [pruebas unitarias](./code/test/) se ecuentran dentro de code/test/. El lanzamiento de un test se puede realizar por línea de comandos ejecutando:   
+~~~
+    python <test>.py
+~~~ 
+
+- Un ejemplo de lanzamiento sería:
+~~~
+   python test_tracker.py
+~~~
+    
+
+
