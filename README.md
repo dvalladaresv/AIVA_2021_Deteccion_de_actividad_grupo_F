@@ -87,8 +87,6 @@ wget https://pjreddie.com/media/files/yolov3.weights
    python affluence_counter.py --video_path=../videos/1_EnterExitCrossingPaths1front.mpg
 ~~~
 
-
-Para la correcta ejecución de la aplicación es necesario tener instalado las siguientes dependencias.
 ## Testing ##
 
 - Las [pruebas unitarias](./code/test/) se ecuentran dentro de code/test/. El lanzamiento de un test se puede realizar por línea de comandos ejecutando:   
