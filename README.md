@@ -75,7 +75,7 @@ wget https://pjreddie.com/media/files/yolov3.weights
 ~~~
 - Si no desea instalarse git, puede descargarse el repositorio como un fichero comprimido .zip. 
 
-### Ejecucuión
+### Ejecución
 
 - El lanzamiento de la aplicación se puede realizar por línea de comandos ejecutando:
 
