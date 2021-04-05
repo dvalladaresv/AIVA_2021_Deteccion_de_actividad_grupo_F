@@ -11,10 +11,7 @@ import imutils
 
 def parse_parameters():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--video_path", help="input video path", required=False, type=str)
-    parser.add_argument("--output_video_path",
-                        help="output video path (if not filled so output will be printed to screen)",
-                        default="", type=str)
+    parser.add_argument("--video_path", help="input video path", required=True, type=str)
     args = parser.parse_args()
     return args
 
