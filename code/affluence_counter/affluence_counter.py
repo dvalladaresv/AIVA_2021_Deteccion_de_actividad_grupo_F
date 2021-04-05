@@ -57,8 +57,6 @@ class AffluenceCounter:
             self.draw_gridlines(frame)
             res, bboxes, _ = det_inst.detect_image(frame)
             tracker_inst.update_trackers_by_dets(frame, bboxes)
-
-            start = time.time()
             tracker_inst.track(frame)
             tracker_inst.check_trackers()
             # show the output frame
@@ -78,5 +76,5 @@ class AffluenceCounter:
 
 if __name__ == '__main__':
     args = parse_parameters()
-    app = AffluenceCounter("/home/vant/Documentos/Master_Vision_Aritificial/AIVA/AIVA_2021_Deteccion_de_actividad_grupo_F/videos/1_EnterExitCrossingPaths1front.mpg")
+    app = AffluenceCounter(args.video_path)
     print(app.process_video())
