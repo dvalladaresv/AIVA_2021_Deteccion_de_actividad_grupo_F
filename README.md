@@ -30,7 +30,7 @@ AfluenceCounter
 | Name | Mail | GitHub |
 | ---- | ---- | ------ |
 | Israel Peñalver Sánchez | i.penalver.2016@alumnos.urjc.es | [IsraelSonseca](https://github.com/IsraelSonseca) |
-| David Vallares Vigara |	d.valladaresv@alumnos.urjc.es |	[dvalladaresv](https://github.com/dvalladaresv) |
+| David Valladares Vigara |	d.valladaresv@alumnos.urjc.es |	[dvalladaresv](https://github.com/dvalladaresv) |
 | Ales Darío Cevallos Juárez |	ad.cevallos@alumnos.urjc.es |	[AlexCeval](https://github.com/AlexCeval) |
 
 ## Profesores ##
@@ -58,7 +58,7 @@ AfluenceCounter
     pip install numpy==1.20.2
     pip install wget==3.2
 ~~~ 
-- Para facilitar la instalación de todas las dependencias se proporciona un fichero [requierements.txt](./code/requieremetns.txt) que se encuentra dentro del directorio code. Para lanzarlo dirigirse a este directorio y lanzar:
+- Para facilitar la instalación de todas las dependencias se proporciona un fichero [requierements.txt](./code/requieremetns.txt) que se encuentra dentro del directorio code/. Para lanzarlo dirigirse a este directorio y lanzar:
 ~~~
     pip install -r requierements.txt
 ~~~
