@@ -9,14 +9,15 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
  
  
 # AfluenceCounter
- - [Nombre de la aplicación](#Name-of-the-application)
- - [Equipo de Desarrollo](#Members-of-the-development-team)
- - [Profesores](#Teachers)
- - [Documentación de Requisitos](#Requirements)
+ - [Nombre de la aplicación](#Nombre de la aplicación)
+ - [Equipo de Desarrollo](#Equipo de Desarrollo)
+ - [Profesores](#Profesores)
+ - [Documentación de Requisitos](#[Documentación de Requisitos)
  - [Presupuesto](#Presupuesto)
- - [Interfaz (MOCK-UP)](#INTERFAZ(MOCK-UP))
- - [Ejecución de la aplicación](#INTERFAZ(MOCK-UP))
- - [Testing](#Pruebas-unitarias)
+ - [Interfaz(MOCK-UP)](#Interfaz(MOCK-UP))
+ - [Documento de diseño](#Documeto de diseño)
+ - [Ejecución de la aplicación](#Ejecución de la aplicación)
+ - [Testing](#Testing)
 
 
 
@@ -45,8 +46,11 @@ AfluenceCounter
 ## Presupuesto ##
 [Presupuesto](./docs/Presupuesto.pdf)
 
-## INTERFAZ (MOCK-UP) ##
+## INTERFAZ(MOCK-UP) ##
 [Interfaz](./docs/mockup.pdf)
+
+## Documento de diseño ##
+[Documento de diseño](./docs/documento_de_diseño.pdf)
 
 ## Ejecución de la aplicación ##  
 
