@@ -1,12 +1,15 @@
 import cv2
 import numpy as np
 
+
 # YOLO weights:
 #   wget https://pjreddie.com/media/files/yolov3.weights
 
-class Detector():
+class Detector:
+    """
+        Detectar personas en la imagen
+    """
     SCALE = 1 / 255.0
-
     CONF_THRESHOLD = 0.9
     NMS_THRESHOLD = 0.4
 
@@ -15,8 +18,16 @@ class Detector():
         self._net = cv2.dnn.readNet(yolo_weights_path, yolo_config_path)
         self._net.setPreferableTarget(cv2.dnn.DNN_TARGET_OPENCL_FP16)
         self._net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
+        self._frame_width = 0
+        self._frame_height = 0
 
     def detect_image(self, frame):
+        """
+            Detectar personas en una imagen
+
+        :param frame -> Imagen
+        :return bboxes -> Lista con los bboxes detectados
+        """
         bboxes = []
 
         self._frame_width = frame.shape[1]
@@ -24,7 +35,7 @@ class Detector():
 
         blob = cv2.dnn.blobFromImage(frame, self.SCALE, (416, 416), (0, 0, 0), True, crop=False)
         self._net.setInput(blob)
-        outs = self._net.forward(self.get_output_layers(self._net))
+        outs = self._net.forward(self.get_output_layers())
 
         class_ids = []
         confidences = []
@@ -33,7 +44,6 @@ class Detector():
             for detection in out:
                 scores = detection[5:]
                 class_id = np.argmax(scores)
-                # print("class id: {0}".format(class_id))
                 confidence = scores[class_id]
                 if class_id == 0 and confidence > self.CONF_THRESHOLD:
                     center_x = int(detection[0] * self._frame_width)
@@ -46,23 +56,16 @@ class Detector():
                     confidences.append(float(confidence))
                     bboxes.append((int(x), int(y), int(w), int(h)))
 
-        indices = cv2.dnn.NMSBoxes(bboxes, confidences, self.CONF_THRESHOLD, self.NMS_THRESHOLD)
+        cv2.dnn.NMSBoxes(bboxes, confidences, self.CONF_THRESHOLD, self.NMS_THRESHOLD)
 
-        for i in indices:
-            i = i[0]
-            box = bboxes[i]
-            x = box[0]
-            y = box[1]
-            w = box[2]
-            h = box[3]
-        return True, bboxes, frame
+        return bboxes
 
+    def get_output_layers(self):
+        """
+            Obtener capas de la red
 
-
-
-    def get_output_layers(self, net):
-        layer_names = net.getLayerNames()
-        output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+        :return:  output_layers -> Lista con las capas de la red
+        """
+        layer_names = self._net.getLayerNames()
+        output_layers = [layer_names[i[0] - 1] for i in self._net.getUnconnectedOutLayers()]
         return output_layers
-
-
