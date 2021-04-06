@@ -1,10 +1,6 @@
 import cv2
 import numpy as np
 
-
-# YOLO weights:
-#   wget https://pjreddie.com/media/files/yolov3.weights
-
 class Detector:
     """
         Detectar personas en la imagen

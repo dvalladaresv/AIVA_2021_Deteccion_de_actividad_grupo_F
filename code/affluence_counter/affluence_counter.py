@@ -2,6 +2,7 @@ import os
 import cv2
 import argparse
 import wget
+import time
 from detector import Detector
 from tracker import Tracker
 
@@ -42,20 +43,24 @@ class AffluenceCounter:
         det_inst = Detector(self.PATH_WEIGHTS, self.PATH_CFG)
         tracker_inst = Tracker()
         cap = cv2.VideoCapture(self.path_video)
+        frame_count = 0
         while True:
             ret, frame = cap.read()
             if not ret:
                 break
-
-            res, bboxes, _ = det_inst.detect_image(frame)  # Detectar personas en el frame
+            start = time.time()
+            bboxes = det_inst.detect_image(frame)  # Detectar personas en el frame
             tracker_inst.update_trackers_by_dets(frame, bboxes)  # Actualizar los bbox de los tracker
             tracker_inst.track(frame)  # Actualizar el seguimiento de las personas
             tracker_inst.check_trackers()  # Comprobar el estado de las personas
-
+            frame_count += 1
+            print("Frame: {0}, time: {1}".format(frame_count, time.time() - start))
         return tracker_inst.get_counter_enter(), tracker_inst.get_counter_pass()
 
 
 if __name__ == '__main__':
     args = parse_parameters()
     app = AffluenceCounter(args.video_path)
-    print(app.process_video())
+    count_enter, count_not = app.process_video()
+    print("Personas que han entrado en la tienda: " + str(count_enter))
+    print("Personas que han pasado de largo: " + str(count_not))

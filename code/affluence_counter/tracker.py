@@ -18,14 +18,14 @@ class Track:
         self._tracker.init(first_frame, bbox)
         self._frame_height, self._frame_width, _ = first_frame.shape
         self._id = id
-        self.status = ""
-        self.references = references
-        self.x = 0
-        self.y = 0
-        self.x_last = 0
-        self.y_last = 0
-        self.timeout = 0
-        self.update_centroid()
+        self._status = ""
+        self._references = references
+        self._x = 0
+        self._y = 0
+        self._x_last = 0
+        self._y_last = 0
+        self._timeout = 0
+        self._update_centroid()
 
     def update(self, frame):
         """
@@ -34,16 +34,16 @@ class Track:
         :param frame: Imagen
         """
         success, self._bbox = self._tracker.update(frame)
-        self.update_centroid()
+        self._update_centroid()
 
-    def update_centroid(self):
+    def _update_centroid(self):
         """
             Calcular el centro del bbox del track
         """
-        self.x_last = self.x
-        self.y_last = self.y
-        self.x = int(self._bbox[0] + (self._bbox[2]) / 2)
-        self.y = int(self._bbox[1] + (self._bbox[3]) / 2)
+        self._x_last = self._x
+        self._y_last = self._y
+        self._x = int(self._bbox[0] + (self._bbox[2]) / 2)
+        self._y = int(self._bbox[1] + (self._bbox[3]) / 2)
 
     def is_finish_track(self):
         """
@@ -79,7 +79,7 @@ class Track:
         :param bbox:
         """
         self._bbox = bbox
-        self.update_centroid()
+        self._update_centroid()
 
     def get_id(self):
         """
@@ -101,7 +101,7 @@ class Track:
         """
         :return: Estado del track
         """
-        return self.status
+        return self._status
 
     def update_status(self):
         """
@@ -115,35 +115,35 @@ class Track:
         """
             Comprobar si el track esta en la región de ref. izquierda
         """
-        left_ref = self.references["left"]
-        if left_ref[0] < self.x < left_ref[1] and not "L" in self.status:
-            self.status = self.status + "L"
+        left_ref = self._references["left"]
+        if left_ref[0] < self._x < left_ref[1] and not "L" in self._status:
+            self._status = self._status + "L"
 
     def _ref_right(self):
         """
             Comprobar si el track esta en la región de ref. derecha
         """
-        right_ref = self.references["right"]
-        if right_ref[0] < self.x < right_ref[1] and not "R" in self.status:
-            self.status = self.status + "R"
+        right_ref = self._references["right"]
+        if right_ref[0] < self._x < right_ref[1] and not "R" in self._status:
+            self._status = self._status + "R"
 
     def _ref_door(self):
         """
             Comprobar si el track esta en la región de ref. puerta
         """
-        door_ref = self.references["door"]
-        if door_ref[0] < self.y < door_ref[1] and not "P":
-            self.status = self.status + "P"
+        door_ref = self._references["door"]
+        if door_ref[0] < self._y < door_ref[1] and not "P" in self._status:
+            self._status = self._status + "P"
 
     def is_timeout(self):
         """
             Comprobar si se ha producido un timeout del track
         """
-        if self.x == self.x_last and self.y == self.y_last:
-            self.timeout = self.timeout + 1
+        if self._x == self._x_last and self._y == self._y_last:
+            self._timeout = self._timeout + 1
         else:
-            self.timeout = 0
-        if self.timeout >= 5:
+            self._timeout = 0
+        if self._timeout >= 5:
             return True
         else:
             return False
