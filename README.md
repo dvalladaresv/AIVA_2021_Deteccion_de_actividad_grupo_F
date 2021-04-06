@@ -64,11 +64,11 @@ AfluenceCounter
 ~~~ 
 - Para facilitar la instalación de todas las dependencias se proporciona un fichero [requierements.txt](code/requierements.txt) que se encuentra dentro del directorio code/. Para lanzarlo dirigirse a este directorio y lanzar:
 ~~~
-    pip install -r requierements.txt
+    pip install -r ./code/requierements.txt
 ~~~
 - Es necesario descargase los pesos de la red Yolo en el directorio [/code/assests/model](/code/assests/model). Para ello ejecutar los siguientes comandos:
 ~~~ 
-cd /code/assests/model 
+cd ./code/assets/model 
 wget https://pjreddie.com/media/files/yolov3.weights
 ~~~ 
 
