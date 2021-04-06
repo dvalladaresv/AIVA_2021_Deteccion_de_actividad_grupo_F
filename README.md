@@ -62,6 +62,19 @@ AfluenceCounter
     pip install numpy==1.20.2
     pip install wget==3.2
 ~~~ 
+
+- Para facilitar la instalación de todas las dependencias se proporciona un fichero [requierements.txt](code/requierements.txt) que se encuentra dentro del directorio code/. Para lanzarlo dirigirse a este directorio y lanzar:
+
+
+
+### Descargar el repositorio
+- Se recomienda utilizar la herramienta de control de versines [git](https://git-scm.com/) para clonarse el repositorio.  
+~~~
+    git clone https://github.com/dvalladaresv/AIVA_2021_Deteccion_de_actividad_grupo_F.git
+~~~
+- Si no desea instalarse git, puede descargarse el repositorio como un fichero comprimido .zip. 
+
+
 - Para facilitar la instalación de todas las dependencias se proporciona un fichero [requierements.txt](code/requierements.txt) que se encuentra dentro del directorio code/. Para lanzarlo dirigirse a este directorio y lanzar:
 ~~~
     pip install -r ./code/requierements.txt
@@ -72,12 +85,6 @@ cd ./code/assets/model
 wget https://pjreddie.com/media/files/yolov3.weights
 ~~~ 
 
-### Descargar el repositorio
-- Se recomienda utilizar la herramienta de control de versines [git](https://git-scm.com/) para clonarse el repositorio.  
-~~~
-    git clone https://github.com/dvalladaresv/AIVA_2021_Deteccion_de_actividad_grupo_F.git
-~~~
-- Si no desea instalarse git, puede descargarse el repositorio como un fichero comprimido .zip. 
 
 ### Ejecución
 
@@ -100,7 +107,7 @@ wget https://pjreddie.com/media/files/yolov3.weights
 
 - Un ejemplo de lanzamiento sería:
 ~~~
-   python test_tracker.py
+   python test_affluence_counter.py
 ~~~
     
 
