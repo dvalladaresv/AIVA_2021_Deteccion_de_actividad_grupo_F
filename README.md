@@ -12,7 +12,7 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
  - [Nombre de la aplicación](#Nombre-de-la-aplicación)
  - [Equipo de Desarrollo](#Equipo-de-Desarrollo)
  - [Profesores](#Profesores)
- - [Documentación de Requisitos](#[Documentación-de-Requisitos)
+ - [Documentación de Requisitos](#Documentación-de-Requisitos)
  - [Presupuesto](#Presupuesto)
  - [Interfaz(MOCK-UP)](#Interfaz(MOCK-UP))
  - [Documento de diseño](#Documeto-de-diseño)
