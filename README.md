@@ -100,7 +100,7 @@ AfluenceCounter
     python affluence_counter.py --video_path=../../videos/1_EnterExitCrossingPaths1front.mpg
   ~~~   
   
-  - Mediante una aplicación web, lanzando el servidor y abriendo el navegador en *http//localhost:5000*
+  - Mediante una aplicación web, lanzando el servidor y abriendo el navegador en *http://localhost:5000*
   ~~~   
         python AfluenceCounterApp.py
   ~~~   
