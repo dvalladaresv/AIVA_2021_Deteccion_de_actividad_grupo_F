@@ -78,8 +78,8 @@ AfluenceCounter
 ~~~
 - Es necesario descargase los pesos de la red Yolo en el directorio [./AffluenceCounter/assests/model](./AffluenceCounter/assests/model). Para ello ejecutar los siguientes comandos:
 ~~~ 
-cd ./AffluenceCounter/assets/model 
-wget https://pjreddie.com/media/files/yolov3.weights
+ cd ./AffluenceCounter/assets/model 
+ wget https://pjreddie.com/media/files/yolov3.weights
 ~~~ 
 
 
