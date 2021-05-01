@@ -105,7 +105,7 @@ wget https://pjreddie.com/media/files/yolov3.weights
         python AfluenceCounterApp.py
   ~~~   
 
-### Despliegue
+## Despliegue ##
 
 - Se ha desarrollado una imagen [Docker](https://www.docker.com/) con el objeto de facilitar el despliegue de la aplicación. Es necesario tener instalado docker en la máquina donde se desea realizar el despliegue.    
 
