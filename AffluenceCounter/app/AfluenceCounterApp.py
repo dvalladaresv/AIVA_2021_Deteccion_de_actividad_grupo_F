@@ -23,7 +23,7 @@ def process_video():
             "noenter": count_not,
             "time": round(time_process/60., 2)
         }
-        os.rename(f.filename)
+        os.remove(f.filename)
 
         return render_template('results.html', results=results)
 
