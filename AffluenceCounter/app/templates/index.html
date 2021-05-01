@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}AffluenceCounter|Inicio{% endblock %}
+
+{% block content %}
+    <div class="form">
+        <div class="form-title">
+            <h1>Bienvendios</h1>
+            <div class="title-infy">
+                <img src="{{ url_for('static', filename= 'img/logo_2.png') }}" alt="infy" width="80%">
+            </div>
+            <p>Sube el vídeo que desea procesar y pulse en enviar</p>
+        </div>
+        <form action = "http://localhost:5000/process_video" method="POST" enctype = "multipart/form-data">
+            <div class="inputs">
+                <input type="file" name="file">
+            </div>
+            <input id="send" type="submit" value="Enviar" class="boton" onclick="processVideo()">
+        </form>
+        {% if  error %}
+        <div class="alert alert-danger   alert-dismissible fade show" role="alert">
+            <strong>Error.</strong> No se ha podido procesar el video enviado
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endif %}
+        <div id="process" style="display: none">
+            <button class="btn btn-primary boton" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Procesando. Esto puede tardar unos minutos..
+            </button>
+        </div>
+    </div>
+    <script>
+        function processVideo() {
+            let send = document.getElementById("send")
+            let process = document.getElementById("process")
+            send.style.display= "none"
+            process.style.display = "block"
+
+        }
+    </script>
+{% endblock %}

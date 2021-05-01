@@ -2,7 +2,7 @@ import unittest
 import sys
 import cv2
 
-sys.path.append("../affluence_counter")
+sys.path.append("../app")
 from detector import Detector
 
 
@@ -12,8 +12,7 @@ class TestDetectorPerson(unittest.TestCase):
         path_img = "img/detector_test.png"
         img = cv2.imread(path_img)
         det_inst = Detector("../assets/model/yolov3.weights", "../assets/model/yolov3.cfg")
-        res, bboxes, _ = det_inst.detect_image(img)
-        self.assertEqual(res, True)
+        bboxes = det_inst.detect_image(img)
         self.assertEqual(2, len(bboxes))
 
 

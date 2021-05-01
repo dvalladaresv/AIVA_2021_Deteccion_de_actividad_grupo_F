@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}AffluenceCounter|Resultados{% endblock %}
+
+{% block content %}
+    <div class="form">
+        <div class="form-title">
+            <div class="title-infy">
+                <img src="{{ url_for('static', filename= 'img/logo_2.png') }}" alt="infy" width="80%">
+            </div>
+            <h1>Resultados obtenidos</h1>
+            <br>
+            <h6>Nombre del video: {{ results["video"] }}</h6>
+            <br>
+            <h6>Personas Entrando: {{ results["enter"] }}</h6>
+            <br>
+            <h6>Personas No Entrando: {{ results["noenter"] }}</h6>
+            <br>
+            <h6>Tiempo en ser procesado: {{ results["time"] }} min</h6>
+            <br>
+            <a href="{{ url_for('index') }}"><input id="send" type="submit" href="" value="Volver" class="boton"></a>
+        </div>
+    </div>
+{% endblock %}

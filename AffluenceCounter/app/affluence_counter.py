@@ -40,6 +40,7 @@ class AffluenceCounter:
             print("downloading checkpoint yolov3.weights... wait please.")
             wget.download("https://pjreddie.com/media/files/yolov3.weights", "../assets/model/")
 
+        init = time.time()
         det_inst = Detector(self.PATH_WEIGHTS, self.PATH_CFG)
         tracker_inst = Tracker()
         cap = cv2.VideoCapture(self.path_video)
@@ -55,12 +56,14 @@ class AffluenceCounter:
             tracker_inst.check_trackers()  # Comprobar el estado de las personas
             frame_count += 1
             print("Frame: {0}, time: {1}".format(frame_count, time.time() - start))
-        return tracker_inst.get_counter_enter(), tracker_inst.get_counter_pass()
+        end = time.time() - init
+
+        return tracker_inst.get_counter_enter(), tracker_inst.get_counter_pass(), end
 
 
 if __name__ == '__main__':
     args = parse_parameters()
     app = AffluenceCounter(args.video_path)
-    count_enter, count_not = app.process_video()
+    count_enter, count_not, time_process = app.process_video()
     print("Personas que han entrado en la tienda: " + str(count_enter))
     print("Personas que han pasado de largo: " + str(count_not))
