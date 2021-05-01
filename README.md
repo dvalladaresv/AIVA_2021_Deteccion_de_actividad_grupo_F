@@ -85,12 +85,12 @@ AfluenceCounter
 
 ### Ejecución en local
 
-- Estando en la raíz del proyecto dirigirse al directorio *./AffluenceCounter/app/*   
+- Estando en la raíz del proyecto, dirigirse al directorio *./AffluenceCounter/app/*   
 ~~~
     cd ./AffluenceCounter/app/
 ~~~
 
-- La aplicación puede ser ejecutado mediante dos formas:
+- La aplicación puede ser ejecutada mediante dos formas:
   
   - Por línea de comandos
   ~~~
