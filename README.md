@@ -76,11 +76,11 @@ AfluenceCounter
 ~~~
     pip install -r ./AffluenceCounter/requirements.txt
 ~~~
-- Es necesario descargase los pesos de la red Yolo en el directorio [./AffluenceCounter/assests/model](./AffluenceCounter/assests/model). Para ello ejecutar los siguientes comandos:
+- Es necesario descargase los pesos de la red Yolo en el directorio [./AffluenceCounter/assests/model](./AffluenceCounter/assets/model/). Para ello ejecutar los siguientes comandos:
 ~~~ 
- cd ./AffluenceCounter/assets/model 
+ cd ./AffluenceCounter/assets/model/ 
  wget https://pjreddie.com/media/files/yolov3.weights
-~~~ 
+~~~   
 
 
 ### Ejecución en local
