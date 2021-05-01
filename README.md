@@ -63,10 +63,6 @@ AfluenceCounter
     pip install wget==3.2
 ~~~ 
 
-- Para facilitar la instalación de todas las dependencias se proporciona un fichero [requierements.txt](code/requierements.txt) que se encuentra dentro del directorio code/. Para lanzarlo dirigirse a este directorio y lanzar:
-
-
-
 ### Descargar el repositorio
 - Se recomienda utilizar la herramienta de control de versines [git](https://git-scm.com/) para clonarse el repositorio.  
 ~~~
@@ -75,39 +71,70 @@ AfluenceCounter
 - Si no desea instalarse git, puede descargarse el repositorio como un fichero comprimido .zip. 
 
 
-- Para facilitar la instalación de todas las dependencias se proporciona un fichero [requierements.txt](code/requierements.txt) que se encuentra dentro del directorio code/. Para lanzarlo dirigirse a este directorio y lanzar:
+- Para facilitar la instalación de todas las dependencias se proporciona un fichero [requirements.txt](./AffluenceCounter/requierements.txt) que se encuentra dentro del directorio code/. Para lanzarlo dirigirse a este directorio y lanzar:
 ~~~
-    pip install -r ./code/requierements.txt
+    pip install -r ./AffluenceCounter/requierements.txt
 ~~~
-- Es necesario descargase los pesos de la red Yolo en el directorio [/code/assests/model](/code/assests/model). Para ello ejecutar los siguientes comandos:
+- Es necesario descargase los pesos de la red Yolo en el directorio [/AffluenceCounter/assests/model](./AffluenceCounter/assests/model). Para ello ejecutar los siguientes comandos:
 ~~~ 
-cd ./code/assets/model 
+cd ./AffluenceCounter/assets/model 
 wget https://pjreddie.com/media/files/yolov3.weights
 ~~~ 
 
 
-### Ejecución
+### Ejecución en local
 
-- El lanzamiento de la aplicación se puede realizar por línea de comandos ejecutando:
+- Estando en la raíz del proyecto dirigirse al direcotorio *./AffluenceCounter/app/*   
+~~~
+    cd ./AffluenceCounter/app/
+~~~
 
-~~~
-    python affluence_counter.py --video_path=<path_video>
-~~~
-- Un ejemplo de lanzamiento sería:
-~~~
-   python affluence_counter.py --video_path=../videos/1_EnterExitCrossingPaths1front.mpg
-~~~
+- La aplicación puede ser ejecutado mediante dos formas:
+  
+  - Por línea de comandos
+  ~~~
+    python affluence_counter.py --video_path=<path_video>  
+  
+    #Example
+    python affluence_counter.py --video_path=../videos/1_EnterExitCrossingPaths1front.mpg
+  ~~~   
+  
+  - Mediante una aplicación web, lanzando el servidor y abriendo el navegador en *http//localhost:5000*
+  ~~~   
+        python AfluenceCounterApp.py
+  ~~~   
+
+## Despliegue
+
+- Se ha desarrollado una imagen [Docker](https://www.docker.com/) con el objeto de facilitar el despliegue de la aplicación. Es necesario tener instalado docker en la máquina donde se desea realizar el despliegue.    
+
+- Pasos a seguir para el despliegue:
+    - Descargarse la imagen docker **dvalladaresvv/aiva-affluence-counter** que se encuentra alojada en [DockerHub](https://hub.docker.com/). Para ello ejecutar:   
+    ~~~
+        docker pull dvalladaresvv/aiva-affluence-counter:latest
+    ~~~   
+  
+    - Lanzar un contenedor con la imagen docker:   
+    ~~~
+        docker run --name AffluenceCounter -d -p 5000:5000 dvalladaresvv/aiva-affluence-counter
+
+    ~~~ 
+    - Puede visualizar que el contenedor esta ejecutandose, utilizando el comando:   
+    ~~~
+        docker ps
+    ~~~  
+    - Abrir un navegador y dirigirse a *http://localhost:5000* y la aplicación estará disponible.   
 
 ## Testing ##
 
-- Las [pruebas unitarias](./code/test/) se ecuentran dentro de code/test/. El lanzamiento de un test se puede realizar por línea de comandos ejecutando:   
+- Las [pruebas unitarias](./AffluenceCounter/test) se ecuentran dentro de *./AffluenceCounter/test*. El lanzamiento de un test se puede realizar por línea de comandos ejecutando:   
 ~~~
     python <test>.py
 ~~~ 
 
 - Un ejemplo de lanzamiento sería:
 ~~~
-   python test_affluence_counter.py
+   python test_detector.py
 ~~~
     
 
