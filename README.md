@@ -97,7 +97,7 @@ AfluenceCounter
     python affluence_counter.py --video_path=<path_video>  
   
     #Example
-    python affluence_counter.py --video_path=../videos/1_EnterExitCrossingPaths1front.mpg
+    python affluence_counter.py --video_path=../../videos/1_EnterExitCrossingPaths1front.mpg
   ~~~   
   
   - Mediante una aplicación web, lanzando el servidor y abriendo el navegador en *http//localhost:5000*
