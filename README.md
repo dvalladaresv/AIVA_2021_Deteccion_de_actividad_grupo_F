@@ -17,6 +17,7 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
  - [Interfaz(MOCK-UP)](#Interfaz(MOCK-UP))
  - [Documento de diseño](#Documeto-de-diseño)
  - [Ejecución de la aplicación](#Ejecución-de-la-aplicación)
+ - [Despliegue](#Despliegue)  
  - [Testing](#Testing)
 
 
@@ -64,51 +65,51 @@ AfluenceCounter
 ~~~ 
 
 ### Descargar el repositorio
-- Se recomienda utilizar la herramienta de control de versines [git](https://git-scm.com/) para clonarse el repositorio.  
+- Se recomienda utilizar la herramienta de control de versiones [git](https://git-scm.com/) para clonarse el repositorio.  
 ~~~
     git clone https://github.com/dvalladaresv/AIVA_2021_Deteccion_de_actividad_grupo_F.git
-~~~
+~~~   
 - Si no desea instalarse git, puede descargarse el repositorio como un fichero comprimido .zip. 
 
 
-- Para facilitar la instalación de todas las dependencias se proporciona un fichero [requirements.txt](./AffluenceCounter/requierements.txt) que se encuentra dentro del directorio code/. Para lanzarlo dirigirse a este directorio y lanzar:
+- Para facilitar la instalación de todas las dependencias se proporciona un fichero [requirements.txt](./AffluenceCounter/requirements.txt) que se encuentra dentro del directorio *AffluenceCounter/*. Para lanzarlo dirigirse a este directorio y lanzar:
 ~~~
-    pip install -r ./AffluenceCounter/requierements.txt
+    pip install -r ./AffluenceCounter/requirements.txt
 ~~~
-- Es necesario descargase los pesos de la red Yolo en el directorio [/AffluenceCounter/assests/model](./AffluenceCounter/assests/model). Para ello ejecutar los siguientes comandos:
+- Es necesario descargase los pesos de la red Yolo en el directorio [./AffluenceCounter/assests/model](./AffluenceCounter/assets/model/). Para ello ejecutar los siguientes comandos:
 ~~~ 
-cd ./AffluenceCounter/assets/model 
-wget https://pjreddie.com/media/files/yolov3.weights
-~~~ 
+ cd ./AffluenceCounter/assets/model/ 
+ wget https://pjreddie.com/media/files/yolov3.weights
+~~~   
 
 
 ### Ejecución en local
 
-- Estando en la raíz del proyecto dirigirse al direcotorio *./AffluenceCounter/app/*   
+- Estando en la raíz del proyecto, dirigirse al directorio *./AffluenceCounter/app/*   
 ~~~
     cd ./AffluenceCounter/app/
 ~~~
 
-- La aplicación puede ser ejecutado mediante dos formas:
+- La aplicación puede ser ejecutada mediante dos formas:
   
   - Por línea de comandos
   ~~~
     python affluence_counter.py --video_path=<path_video>  
   
     #Example
-    python affluence_counter.py --video_path=../videos/1_EnterExitCrossingPaths1front.mpg
+    python affluence_counter.py --video_path=../../videos/1_EnterExitCrossingPaths1front.mpg
   ~~~   
   
-  - Mediante una aplicación web, lanzando el servidor y abriendo el navegador en *http//localhost:5000*
+  - Mediante una aplicación web, lanzando el servidor y abriendo el navegador en *http://localhost:5000*
   ~~~   
         python AfluenceCounterApp.py
   ~~~   
 
-## Despliegue
+## Despliegue ##
 
 - Se ha desarrollado una imagen [Docker](https://www.docker.com/) con el objeto de facilitar el despliegue de la aplicación. Es necesario tener instalado docker en la máquina donde se desea realizar el despliegue.    
 
-- Pasos a seguir para el despliegue:
+- Pasos a seguir para el despliegue:   
     - Descargarse la imagen docker **dvalladaresvv/aiva-affluence-counter** que se encuentra alojada en [DockerHub](https://hub.docker.com/). Para ello ejecutar:   
     ~~~
         docker pull dvalladaresvv/aiva-affluence-counter:latest
@@ -116,10 +117,9 @@ wget https://pjreddie.com/media/files/yolov3.weights
   
     - Lanzar un contenedor con la imagen docker:   
     ~~~
-        docker run --name AffluenceCounter -d -p 5000:5000 dvalladaresvv/aiva-affluence-counter
-
-    ~~~ 
-    - Puede visualizar que el contenedor esta ejecutandose, utilizando el comando:   
+        docker run --name AffluenceCounter -d -p 5000:5000 dvalladaresvv/aiva-affluence-counter   
+    ~~~    
+    - Puede visualizar que el contenedor está ejecutándose, utilizando el comando:   
     ~~~
         docker ps
     ~~~  
@@ -127,7 +127,7 @@ wget https://pjreddie.com/media/files/yolov3.weights
 
 ## Testing ##
 
-- Las [pruebas unitarias](./AffluenceCounter/test) se ecuentran dentro de *./AffluenceCounter/test*. El lanzamiento de un test se puede realizar por línea de comandos ejecutando:   
+- Las [pruebas unitarias](./AffluenceCounter/test) se encuentran dentro de *./AffluenceCounter/test*. El lanzamiento de un test se puede realizar por línea de comandos ejecutando:   
 ~~~
     python <test>.py
 ~~~ 
