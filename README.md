@@ -53,7 +53,7 @@ AfluenceCounter
 
 ## Documento de diseño ##
 [Documento de diseño](./docs/documento_de_diseño.pdf)
-## Documento de diseño ##
+## Documento del sistema ##
 [Documento del sistema](./docs/sistema_funcional.pdf)
 ## Ejecución de la aplicación ##  
 
