@@ -15,8 +15,8 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
  - [Documentación de Requisitos](#Documentación-de-Requisitos)
  - [Presupuesto](#Presupuesto)
  - [Interfaz(MOCK-UP)](#Interfaz(MOCK-UP))
- - [Documento de diseño](#Documeto-de-diseño)
- - [Documento del sistema](#Documeto-del-sistema)
+ - [Documento de diseño](#Documento-de-diseño)
+ - [Documento del sistema](#Documento-del-sistema)
  - [Ejecución de la aplicación](#Ejecución-de-la-aplicación)
  - [Despliegue](#Despliegue)  
  - [Testing](#Testing)
@@ -52,9 +52,11 @@ AfluenceCounter
 [Interfaz](./docs/mockup.pdf)
 
 ## Documento de diseño ##
-[Documento de diseño](./docs/documento_de_diseño.pdf)
+[Documento de diseño](./docs/documento_de_diseño.pdf)  
+
 ## Documento del sistema ##
-[Documento del sistema](./docs/sistema_funcional.pdf)
+[Documento del sistema](./docs/sistema_funcional.pdf)   
+
 ## Ejecución de la aplicación ##  
 
 ### Pre-requisitos    
