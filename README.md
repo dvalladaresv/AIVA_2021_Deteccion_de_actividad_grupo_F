@@ -109,8 +109,8 @@ AfluenceCounter
   ~~~   
         python AfluenceCounterApp.py
   ~~~   
-- Video-Tutorial     
-[Tutorial del funcionamiento de la aplicacion](./docs/app.mp4)    
+- Video-Tutorial del funcionamiento de la apliación    
+[![Video tutorial aplicacion](https://img.youtube.com/vi/CPATTRmpk4s/0.jpg)](https://www.youtube.com/watch?v=CPATTRmpk4s)   
   
 ## Despliegue ##
 
@@ -133,7 +133,7 @@ AfluenceCounter
     - Abrir un navegador y dirigirse a *http://localhost:5000* y la aplicación estará disponible.   
 
 - Video-Tutorial para el despliegue    
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/1ILB6NCaElU/0.jpg)](https://www.youtube.com/watch?v=1ILB6NCaElU)
+[![Video tutorial despliegue](https://img.youtube.com/vi/1ILB6NCaElU/0.jpg)](https://www.youtube.com/watch?v=1ILB6NCaElU)
 
 ## Testing ##
 
