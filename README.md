@@ -109,7 +109,7 @@ AfluenceCounter
   ~~~   
         python AfluenceCounterApp.py
   ~~~   
-- Video-Tutorial del funcionamiento de la apliación    
+- Video-Tutorial del funcionamiento de la aplicación    
 [![Video tutorial aplicacion](https://img.youtube.com/vi/CPATTRmpk4s/0.jpg)](https://www.youtube.com/watch?v=CPATTRmpk4s)   
   
 ## Despliegue ##
