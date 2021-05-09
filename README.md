@@ -109,7 +109,9 @@ AfluenceCounter
   ~~~   
         python AfluenceCounterApp.py
   ~~~   
-
+- Video-Tutorial     
+[Tutorial del funcionamiento de la aplicacion](./docs/app.mp4)    
+  
 ## Despliegue ##
 
 - Se ha desarrollado una imagen [Docker](https://www.docker.com/) con el objeto de facilitar el despliegue de la aplicación. Es necesario tener instalado docker en la máquina donde se desea realizar el despliegue.    
@@ -129,6 +131,9 @@ AfluenceCounter
         docker ps
     ~~~  
     - Abrir un navegador y dirigirse a *http://localhost:5000* y la aplicación estará disponible.   
+
+- Video-Tutorial     
+[Tutorial de Despliegue](./docs/despliegue.mp4)   
 
 ## Testing ##
 
