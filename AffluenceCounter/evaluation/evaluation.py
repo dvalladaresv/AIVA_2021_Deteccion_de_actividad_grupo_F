@@ -3,10 +3,6 @@ import csv
 import re
 import sys
 
-
-
-
-
 sys.path.append("../app/")
 from affluence_counter import AffluenceCounter
 
@@ -19,7 +15,7 @@ if __name__=="__main__":
 
     count = 1
     for video_path in videos_path:
-        with open('../../videos/results.csv', 'w', newline='') as csvfile:
+        with open('./results.csv', 'w', newline='') as csvfile:
             fieldnames = ['id', 'enter', 'noenter']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
