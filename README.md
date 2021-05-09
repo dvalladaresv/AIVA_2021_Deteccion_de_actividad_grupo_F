@@ -20,6 +20,7 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
  - [Ejecución de la aplicación](#Ejecución-de-la-aplicación)
  - [Despliegue](#Despliegue)  
  - [Testing](#Testing)
+ - [Métricas sobre el sistema](#Métricas-sobre-el-sistema)
 
 
 
@@ -141,5 +142,6 @@ AfluenceCounter
    python test_detector.py
 ~~~
     
-
-
+## Métricas sobre el sistema ##
+Metricas obtenidas utilizando la aplicación [Sonarqube](https://www.sonarqube.org/)
+<img src="./docs/sonarquebe.png">
