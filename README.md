@@ -132,8 +132,8 @@ AfluenceCounter
     ~~~  
     - Abrir un navegador y dirigirse a *http://localhost:5000* y la aplicación estará disponible.   
 
-- Video-Tutorial     
-[Tutorial de Despliegue](./docs/despliegue.mp4)   
+- Video-Tutorial para el despliegue    
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/1ILB6NCaElU/0.jpg)](https://www.youtube.com/watch?v=1ILB6NCaElU)
 
 ## Testing ##
 
