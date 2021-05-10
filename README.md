@@ -21,6 +21,7 @@ En este repositorio se irá desarrollando la aplicación de detección de posibl
  - [Despliegue](#Despliegue)  
  - [Testing](#Testing)
  - [Métricas sobre el sistema](#Métricas-sobre-el-sistema)
+ - [Presentación al cliente](#Presentacion-al-cliente)
 
 
 
@@ -150,3 +151,9 @@ AfluenceCounter
 ## Métricas sobre el sistema ##
 Metricas obtenidas utilizando la aplicación [Sonarqube](https://www.sonarqube.org/)
 <img src="./docs/sonarquebe.png">
+
+
+
+
+## Presentacion al cliente ##
+[Presentacion al cliente](./docs/presentacion_cliente_aiva.pdf)   
